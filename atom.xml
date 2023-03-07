@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-07T01:01:15.706Z</updated>
+  <updated>2023-03-07T06:47:55.971Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>面试题</title>
+    <link href="http://example.com/2023/03/07/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://example.com/2023/03/07/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
+    <published>2023-03-07T05:50:15.081Z</published>
+    <updated>2023-03-07T06:47:55.971Z</updated>
+    
+    <content type="html"><![CDATA[<p>什么是死锁(deadlock)？</p><p>死锁就是资源无法释放，两个线程都持有一个锁，且互相请求对方的锁，两个线程互相等待对方释放锁，就进入了无限等待状态。</p><p>死锁有四个必要条件：</p><p>资源互斥（锁在同一时刻只能被一个线程使用）<br>不可剥夺（其他线程无法抢夺已经被占有的锁，只能等占有者自行释放锁）<br>请求与保持（例如 A 线程的行为）<br>循环等待（例如 A、B 线程互相等待）</p><p>如何避免死锁？破坏四个必要条件之一，即可：</p><p>资源不互斥<br>可剥夺<br>同时请求，即要么同时持有所有需要的资源，要么都不持有<br>为资源编号，线程只能从小到大依次请求资源，不能请求一个更小编号的资源</p><br/><p> Redis的缓存击穿及解决方案</p><p>缓存击穿是指某一个热点数据缓存中没有但数据库中有数据（一般是缓存时间到期）。这时由于并发用户特别多，同时读缓存没读到数据，又同时去数据库去取数据，引起数据库压力瞬间增大，造成过大压力。</p><p>面试官追问：缓存击穿你会怎么解决？<br>设置热点数据永远不过期。<br>接口限流与熔断，降级。重要的接口一定要做好限流策略，防止用户恶意刷接口，同时要降级准备，当接口中的某些服务不可用时候，进行熔断，失败快速返回机制。<br>设置互斥锁。在并发的多个请求中，只有第一个请求线程能拿到锁并执行数据库查询操作，其他的线程拿不到锁就阻塞等着，等到第一个线程将数据写入缓存后，直接走缓存。（可以使用 Redis 分布式锁）</p><br/><p>spring的常用注解有哪些？</p><p>@Value：属性赋值</p><p>@Component:与业务层、dao层、控制层不相关的类需要在spring容器中创建使用</p><p>@Repository:dao层对象的创建</p><p>@Service:业务层层对象的创建</p><p>@Controller:控制层对象的创建</p><p>@Autowired:引用类型赋值,支持byName。默认是byType</p><br/><p>SpringMVC工作原理<br>请描述Spring MVC的工作流程？描述一下 DispatcherServlet 的工作流程</p><br/><p>从浏览器端发起请求会到dispatcheserverlet,前端控制器，前端控制器请求到处理器映射器，返回结果转发到处理器映射器，告诉他去处理器适配器，处理器适配器就回去执行处理器返回modelandview给处理器映射器，返回给前端控制器，给到视图解析器，返回视图再给到视图</p><br/><p>Sql语句优化有哪些？数据库的优化怎样优化？</p><br/><p>可以从几个方面考虑：</p><p>优化表结构</p><p>尽量使用数字型字段。若只含数值信息的字段尽量不要设计为字符型，这会降低查询和连接的性能，并会增加存储开销。这是因为引擎在处理查询和连接时会逐个比较字符串中每一个字符，而对于数字型而言只需要比较一次就够了。<br>尽可能的使用 varchar 代替 char。可变长字段存储空间小，可以节省存储空间。<br>当索引列大量重复数据时，可以把索引删除掉。比如有一列是性别，只有男、女，这样的索引是无效的。<br>优化查询</p><p>应尽量避免在 where 子句中使用 !&#x3D; 或 &lt;&gt; 操作符，否则将引擎放弃使用索引而进行全表扫描。<br>应尽量避免在 where 子句中使用 or 来连接条件，如果一个字段有索引，一个字段没有索引，将导致引擎放弃使用索引而进行全表扫描。建议使用 union 替换 or<br>应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描<br>in 和 not in 也要慎用，否则会导致全表扫描<br>优化嵌套查询时可以将子查询尽量替换为多表连接查询（JOIN）<br>任何查询也不要出现select *！<br>索引优化</p><p>尽量使用复合索引，而少使用单列索引<br>最左前缀法则：如果索引了多列，要遵守最左前缀法则。指的是查询从索引的最左前列开始，并且不跳过索引中的列<br>对作为查询条件和 order by的字段建立索引<br>对查询进行优化，要尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引<br>其他优化</p><p>当进行数据的insert操作的时候，可以考虑采用以下几种优化方案：</p><p>如果需要同时对一张表插入很多行数据时，应该尽量使用多个值表的insert语句，这种方式将大大的缩减客户端与数据库之间的连接、关闭等消耗。使得效率比分开执行的单个insert语句快。<br>手动开启事务后在进行数据插入<br>数据有序插入（按主键）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;什么是死锁(deadlock)？&lt;/p&gt;
+&lt;p&gt;死锁就是资源无法释放，两个线程都持有一个锁，且互相请求对方的锁，两个线程互相等待对方释放锁，就进入了无限等待状态。&lt;/p&gt;
+&lt;p&gt;死锁有四个必要条件：&lt;/p&gt;
+&lt;p&gt;资源互斥（锁在同一时刻只能被一个线程使用）&lt;br&gt;不可剥夺（</summary>
+      
+    
+    
+    
+    <category term="面试" scheme="http://example.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="java" scheme="http://example.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>实用代码</title>
-    <link href="http://example.com/2023/03/07/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
-    <id>http://example.com/2023/03/07/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/</id>
+    <link href="http://example.com/2023/03/07/java/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    <id>http://example.com/2023/03/07/java/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/</id>
     <published>2023-03-07T01:00:35.246Z</published>
-    <updated>2023-03-07T01:01:15.706Z</updated>
+    <updated>2023-03-07T06:47:53.150Z</updated>
     
     <content type="html"><![CDATA[<p>1.取出list的某一个值 </p><p>String code &#x3D; list.get(6).getMaterialCode();</p><p>2.contains方法<br>java.lang.String.contains()</p><p>方法返回true，当且仅当此字符串包含指定的char值序列</p><p>返回值为true和false</p><p>public static void main(String[] args) {</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">String str = &quot;abc&quot;;</span><br><span class="line"></span><br><span class="line">boolean status = str.contains(&quot;a&quot;);</span><br><span class="line"></span><br><span class="line">if(status)&#123;</span><br><span class="line">    System.out.println(&quot;包含&quot;);</span><br><span class="line"></span><br><span class="line">&#125;else&#123;</span><br><span class="line">    System.out.println(&quot;不包含&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="3"><li><p>git：<br> git clone 仓库链接<br> git add ,<br> git commit -m “提交信息”<br> git push<br> git pull</p></li><li><p>vue：<br> npm run dev  &#x2F;&#x2F;启动一个vue项目</p></li><li><p>redis：<br> redis-server [–port 6379]   &#x2F;&#x2F;启动redis<br> .&#x2F;redis-cli [-h 127.0.0.1 -p 6379  &#x2F;&#x2F;链接redis</p></li></ol>]]></content>
     
@@ -36,26 +63,10 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>第一个</title>
-    <link href="http://example.com/2023/03/07/%E7%AC%AC%E4%B8%80%E4%B8%AA/"/>
-    <id>http://example.com/2023/03/07/%E7%AC%AC%E4%B8%80%E4%B8%AA/</id>
-    <published>2023-03-07T00:04:11.861Z</published>
-    <updated>2023-03-07T01:01:39.172Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <category term="java" scheme="http://example.com/categories/java/"/>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
+    <category term="实用代码" scheme="http://example.com/tags/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
     
   </entry>
   
