@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小红帽的个人博客</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2023-03-07T01:01:15.706Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>小红帽</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>实用代码</title>
+    <link href="http://example.com/2023/03/07/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/"/>
+    <id>http://example.com/2023/03/07/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/</id>
+    <published>2023-03-07T01:00:35.246Z</published>
+    <updated>2023-03-07T01:01:15.706Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.取出list的某一个值 </p><p>String code &#x3D; list.get(6).getMaterialCode();</p><p>2.contains方法<br>java.lang.String.contains()</p><p>方法返回true，当且仅当此字符串包含指定的char值序列</p><p>返回值为true和false</p><p>public static void main(String[] args) {</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">String str = &quot;abc&quot;;</span><br><span class="line"></span><br><span class="line">boolean status = str.contains(&quot;a&quot;);</span><br><span class="line"></span><br><span class="line">if(status)&#123;</span><br><span class="line">    System.out.println(&quot;包含&quot;);</span><br><span class="line"></span><br><span class="line">&#125;else&#123;</span><br><span class="line">    System.out.println(&quot;不包含&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="3"><li><p>git：<br> git clone 仓库链接<br> git add ,<br> git commit -m “提交信息”<br> git push<br> git pull</p></li><li><p>vue：<br> npm run dev  &#x2F;&#x2F;启动一个vue项目</p></li><li><p>redis：<br> redis-server [–port 6379]   &#x2F;&#x2F;启动redis<br> .&#x2F;redis-cli [-h 127.0.0.1 -p 6379  &#x2F;&#x2F;链接redis</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1.取出list的某一个值 &lt;/p&gt;
+&lt;p&gt;String code &amp;#x3D; list.get(6).getMaterialCode();&lt;/p&gt;
+&lt;p&gt;2.contains方法&lt;br&gt;java.lang.String.contains()&lt;/p&gt;
+&lt;p&gt;方法返回tru</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第一个</title>
+    <link href="http://example.com/2023/03/07/%E7%AC%AC%E4%B8%80%E4%B8%AA/"/>
+    <id>http://example.com/2023/03/07/%E7%AC%AC%E4%B8%80%E4%B8%AA/</id>
+    <published>2023-03-07T00:04:11.861Z</published>
+    <updated>2023-03-07T01:01:39.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
