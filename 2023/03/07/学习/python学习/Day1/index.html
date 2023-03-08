@@ -396,6 +396,9 @@
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">用for循环实现1~100的偶数求和</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">101</span>, <span class="number">2</span>):</span><br><span class="line">    <span class="built_in">sum</span> += x</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>) <span class="comment">#2550</span></span><br></pre></td></tr></table></figure>
 
+<p>   while循环，不知道具体的循环结构时使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">猜数字大小游戏</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span><span class="string">&#x27;</span></span><br><span class="line"><span class="string">import random</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">a = random.randint(1,100)</span></span><br><span class="line"><span class="string">counter = 0 </span></span><br><span class="line"><span class="string">while True:</span></span><br><span class="line"><span class="string">    counter += 1</span></span><br><span class="line"><span class="string">    number = int(input(&#x27;</span>请输入<span class="number">1</span>~<span class="number">100</span>的数字：<span class="string">&#x27;))</span></span><br><span class="line"><span class="string">    if number &lt; a:</span></span><br><span class="line"><span class="string">        print(&#x27;</span>你输入的小了<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">    elif number &gt; a:</span></span><br><span class="line"><span class="string">        print(&#x27;</span>你输入的大了<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">    else:</span></span><br><span class="line"><span class="string">        print(&#x27;</span>猜对了<span class="string">&#x27;)</span></span><br><span class="line"><span class="string">        break</span></span><br><span class="line"><span class="string">print (&#x27;</span>你一共猜了%d次<span class="string">&#x27; % counter)</span></span><br></pre></td></tr></table></figure>
+
       </div>
       <div class="post-tags-categories">
         
@@ -438,40 +441,22 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://th.wallhaven.cc/small/2y/2yz8x9.jpg" class="lazyload placeholder" data-srcset="https://th.wallhaven.cc/small/2y/2yz8x9.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic2.zhimg.com/80/v2-63bbdb5b76b8d349ad35ff4281efbd37_1440w.webp" class="lazyload placeholder" data-srcset="https://pic2.zhimg.com/80/v2-63bbdb5b76b8d349ad35ff4281efbd37_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
     </div>
-    <a href="/2023/03/08/python%20%E8%84%9A%E6%9C%AC/python%E5%AE%9A%E6%97%B6%E5%BC%80%E5%85%B3%E6%9C%BA%E8%84%9A%E6%9C%AC/" class="post-nav-link">
+    <a href="/2023/03/07/java/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> Prev:
-        <div class="title-text">python定时开关机脚本</div>
+        <div class="title-text">实用代码</div>
       </div>
       
       <!-- <div class="content">
-        python定时开关机脚本win10描述：每天早上8.00执行开机 ，15.32关机。
-1234567891011121
+        1.取出list的某一个值 
+String code &#x3D; list.get(6).getMaterialCod
       </div> -->
     </a>
   </div>
 
 
-
-  
-  <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://th.wallhaven.cc/small/we/we1q2r.jpg" class="lazyload placeholder" data-srcset="https://th.wallhaven.cc/small/we/we1q2r.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
-    </div>
-    <a href="/2023/03/07/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-nav-link">
-      <div class="title">
-        Next: <i class="fas fa-angle-right"></i>
-        <div class="title-text">面试题</div>
-      </div>
-      <!-- <div class="content">
-        什么是死锁(deadlock)？
-死锁就是资源无法释放，两个线程都持有一个锁，且互相请求对方的锁，两个线程互相等待对方释
-      </div> -->
-    </a>
-  </div>
 
 </div>
 
@@ -657,27 +642,6 @@
             
 
             <div class="post-img-box">
-              <a href="/2023/03/07/%E5%AD%A6%E4%B9%A0/python%E5%AD%A6%E4%B9%A0/Day1/" class="post-img " style="background-size: cover; 
-                background-position: center center;">
-                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                
-                  <span class="post-date">03-07</span>
-                
-              </div>
-              <a class="post-title" href="/2023/03/07/%E5%AD%A6%E4%B9%A0/python%E5%AD%A6%E4%B9%A0/Day1/">分支结构 . 循环结构</a>
-            </div>
-          </div>
-        
-          <div class="aside-list-item">
-            
-            
-            
-
-            <div class="post-img-box">
               <a href="/2023/03/07/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-img " style="background-size: cover; 
                 background-position: center center;">
                 <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://th.wallhaven.cc/small/we/we1q2r.jpg" class="lazyload placeholder" data-srcset="https://th.wallhaven.cc/small/we/we1q2r.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
@@ -711,6 +675,27 @@
                 
               </div>
               <a class="post-title" href="/2023/03/07/java/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/">实用代码</a>
+            </div>
+          </div>
+        
+          <div class="aside-list-item">
+            
+            
+            
+
+            <div class="post-img-box">
+              <a href="/2023/03/07/%E5%AD%A6%E4%B9%A0/python%E5%AD%A6%E4%B9%A0/Day1/" class="post-img " style="background-size: cover; 
+                background-position: center center;">
+                <img class="lazyload lazyload placeholder" style="width:100%;height:100%;object-fit:cover;" data-src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                
+                  <span class="post-date">03-07</span>
+                
+              </div>
+              <a class="post-title" href="/2023/03/07/%E5%AD%A6%E4%B9%A0/python%E5%AD%A6%E4%B9%A0/Day1/">分支结构 . 循环结构</a>
             </div>
           </div>
         
