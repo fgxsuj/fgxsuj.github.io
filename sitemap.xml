@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/03/08/python%20%E8%84%9A%E6%9C%AC/python%E5%AE%9A%E6%97%B6%E5%BC%80%E5%85%B3%E6%9C%BA%E8%84%9A%E6%9C%AC/</loc>
+    <loc>http://xhmblog.com/2023/03/08/python%20%E8%84%9A%E6%9C%AC/python%E5%AE%9A%E6%97%B6%E5%BC%80%E5%85%B3%E6%9C%BA%E8%84%9A%E6%9C%AC/</loc>
     
     <lastmod>2023-03-08</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/03/07/%E5%AD%A6%E4%B9%A0/python%E5%AD%A6%E4%B9%A0/Day1/</loc>
+    <loc>http://xhmblog.com/2023/03/07/%E5%AD%A6%E4%B9%A0/python%E5%AD%A6%E4%B9%A0/Day1/</loc>
     
     <lastmod>2023-03-07</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/03/07/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
+    <loc>http://xhmblog.com/2023/03/07/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     
     <lastmod>2023-03-07</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/03/07/java/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/</loc>
+    <loc>http://xhmblog.com/2023/03/07/java/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/</loc>
     
     <lastmod>2023-03-07</lastmod>
     
@@ -39,7 +39,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>http://xhmblog.com/</loc>
     <lastmod>2023-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -47,28 +47,28 @@
 
   
   <url>
-    <loc>http://example.com/tags/python-%E8%84%9A%E6%9C%AC/</loc>
+    <loc>http://xhmblog.com/tags/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2023-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/</loc>
+    <loc>http://xhmblog.com/tags/python-%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2023-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/java/</loc>
+    <loc>http://xhmblog.com/tags/java/</loc>
     <lastmod>2023-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/python/</loc>
+    <loc>http://xhmblog.com/tags/python/</loc>
     <lastmod>2023-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -77,28 +77,28 @@
 
   
   <url>
-    <loc>http://example.com/categories/python-%E8%84%9A%E6%9C%AC/</loc>
+    <loc>http://xhmblog.com/categories/java/</loc>
     <lastmod>2023-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/java/</loc>
+    <loc>http://xhmblog.com/categories/python-%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2023-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E9%9D%A2%E8%AF%95/</loc>
+    <loc>http://xhmblog.com/categories/%E9%9D%A2%E8%AF%95/</loc>
     <lastmod>2023-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/python/</loc>
+    <loc>http://xhmblog.com/categories/python/</loc>
     <lastmod>2023-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
