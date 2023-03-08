@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>分支结构 . 循环结构 | 小红帽的个人博客</title>
+  <title>python定时开关机脚本 | 小红帽的个人博客</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -332,21 +332,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp')">
+  background-position: center center;position: relative;background-image:url('https://th.wallhaven.cc/small/2y/2yz8x9.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        分支结构 . 循环结构
+        python定时开关机脚本
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2023-03-07 |
+          <i class="fas fa-calendar"></i> Published in：2023-03-08 |
         </span>
       
 
@@ -354,8 +354,8 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> category：
           
-            <a href="/categories/python/" class="post-detail-header_category">
-              python
+            <a href="/categories/python-%E8%84%9A%E6%9C%AC/" class="post-detail-header_category">
+              python 脚本
             </a>
           
         </span>
@@ -379,30 +379,19 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h1><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>  在需要判断或选择的时候使用。</p>
-<h3 id="if语句的使用"><a href="#if语句的使用" class="headerlink" title="if语句的使用"></a>if语句的使用</h3><p>   python中分支结构可以使用 if. elif . 和else 关键字。</p>
-<p> 例子   :</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">username = inpit(<span class="string">&#x27;请输入用户名&#x27;</span>)</span><br><span class="line">password = <span class="built_in">input</span>(<span class="string">&#x27;去输入密码&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> username == <span class="string">&#x27;admin&#x27;</span> <span class="keyword">and</span> password == <span class="string">&#x27;admin123&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;登陆成功&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;登陆失败&quot;</span>)</span><br></pre></td></tr></table></figure>
+        <h1 id="python定时开关机脚本win10"><a href="#python定时开关机脚本win10" class="headerlink" title="python定时开关机脚本win10"></a>python定时开关机脚本win10</h1><p>描述：每天早上8.00执行开机 ，15.32关机。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">today = datetime.datetime.now().weekday()</span><br><span class="line"><span class="keyword">if</span> today == <span class="number">6</span>:  <span class="comment"># 如果是星期天则跳过</span></span><br><span class="line">    exit()</span><br><span class="line"></span><br><span class="line">shutdown_time = datetime.datetime.now().replace(hour=<span class="number">5</span>, minute=<span class="number">32</span>, second=<span class="number">0</span>, microsecond=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">if</span> datetime.datetime.now() &gt; shutdown_time:</span><br><span class="line">    shutdown_time += datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">turnon_time = datetime.datetime.now().replace(hour=<span class="number">8</span>, minute=<span class="number">0</span>, second=<span class="number">0</span>, microsecond=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">if</span> datetime.datetime.now() &gt; turnon_time:</span><br><span class="line">    turnon_time += datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    <span class="keyword">if</span> today != now.weekday():  <span class="comment"># 每过一天重新检查是否为星期天</span></span><br><span class="line">        <span class="keyword">if</span> now.weekday() == <span class="number">6</span>:</span><br><span class="line">            exit()</span><br><span class="line">        today = now.weekday()</span><br><span class="line"></span><br><span class="line">        shutdown_time = datetime.datetime.now().replace(hour=<span class="number">5</span>, minute=<span class="number">32</span>, second=<span class="number">0</span>, microsecond=<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">if</span> now &gt; shutdown_time:</span><br><span class="line">            shutdown_time += datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        turnon_time = datetime.datetime.now().replace(hour=<span class="number">8</span>, minute=<span class="number">0</span>, second=<span class="number">0</span>, microsecond=<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">if</span> now &gt; turnon_time:</span><br><span class="line">            turnon_time += datetime.timedelta(days=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> now &gt;= turnon_time <span class="keyword">and</span> now &lt;= shutdown_time:</span><br><span class="line">        os.system(<span class="string">&#x27;shutdown /a&#x27;</span>)  <span class="comment"># 取消之前的关机计划</span></span><br><span class="line">        time_diff = (shutdown_time - now).total_seconds()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;将在 %s 关机&#x27;</span> % shutdown_time)</span><br><span class="line">        os.system(<span class="string">&#x27;shutdown /s /t %d&#x27;</span> % time_diff)</span><br><span class="line">    <span class="keyword">elif</span> now &lt; turnon_time:</span><br><span class="line">        os.system(<span class="string">&#x27;shutdown /a&#x27;</span>)  <span class="comment"># 取消之前的关机计划</span></span><br><span class="line">        time_diff = (turnon_time - now).total_seconds()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;将在 %s 开机&#x27;</span> % turnon_time)</span><br><span class="line">        os.system(<span class="string">&#x27;shutdown /s /f /t %d&#x27;</span> % time_diff)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        os.system(<span class="string">&#x27;shutdown /a&#x27;</span>)  <span class="comment"># 取消之前的关机计划</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>   多个分支条件：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">分段函数求值</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        3x - 5  (x &gt; 1)</span></span><br><span class="line"><span class="string">f(x) =  x + 2   (-1 &lt;= x &lt;= 1)</span></span><br><span class="line"><span class="string">        5x + 3  (x &lt; -1)</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">x = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;x = &#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> x &gt; <span class="number">1</span>:</span><br><span class="line">    y = <span class="number">3</span> * x - <span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> x &gt;= -<span class="number">1</span>:</span><br><span class="line">    y = x + <span class="number">2</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    y = <span class="number">5</span> * x + <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;f(%.2f) = %.2f&#x27;</span> % (x, y))    </span><br></pre></td></tr></table></figure>
-
-<br/>
-
-<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><h2 id="应用场景-1"><a href="#应用场景-1" class="headerlink" title="应用场景"></a>应用场景</h2><p>  重复执行代码或指令的时候 ，python 中有两种循环结构 ，for-in 和 while 循环。</p>
-<h3 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h3><pre><code> for-in循环，明确知道循环执行的次数或对一个容器进行迭代时可使用。
-</code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">用for循环实现1~100求和</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span> </span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">101</span>):</span><br><span class="line">    <span class="built_in">sum</span> += x</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>)    <span class="comment">#5050</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">用for循环实现1~100的偶数求和</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">101</span>, <span class="number">2</span>):</span><br><span class="line">    <span class="built_in">sum</span> += x</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>) <span class="comment">#2550</span></span><br></pre></td></tr></table></figure>
+<p>要在 Windows 10 上定时执行 Python 脚本，可以使用 Windows 任务计划程序。可以按照以下步骤操作：</p>
+<p>1.打开 Windows 任务计划程序，选择“创建任务”来创建一个新的任务。<br>2.在“常规”选项卡中为该任务命名，并选择“以最高权限运行此任务”选项。<br>3.在“触发器”选项卡中添加一个新的触发器，设置触发器的开始时间、日期、重复间隔等信息。<br>4.在“操作”选项卡中添加一个新的操作，输入 Python 解释器的路径和要执行的脚本的路径。<br>5.在“条件”选项卡中选择一些其他的条件来控制任务的执行。<br>6.点击“确定”来保存该任务，并且在规定的时间自动执行 Python 脚本。</p>
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/python/" class="">
-              python
+            <a href="/tags/python-%E8%84%9A%E6%9C%AC/" class="">
+              python 脚本
             </a>
           
         </div>
@@ -416,7 +405,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>link:  </strong>
-    <a href="/2023/03/07/学习/python学习/Day1/" target="_blank" title="分支结构 . 循环结构">http://example.com/2023/03/07/学习/python学习/Day1/</a>
+    <a href="/2023/03/08/python 脚本/python定时开关机脚本/" target="_blank" title="python定时开关机脚本">http://example.com/2023/03/08/python 脚本/python定时开关机脚本/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright notice:   </strong>
@@ -434,41 +423,22 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://th.wallhaven.cc/small/2y/2yz8x9.jpg" class="lazyload placeholder" data-srcset="https://th.wallhaven.cc/small/2y/2yz8x9.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-    </div>
-    <a href="/2023/03/08/python%20%E8%84%9A%E6%9C%AC/python%E5%AE%9A%E6%97%B6%E5%BC%80%E5%85%B3%E6%9C%BA%E8%84%9A%E6%9C%AC/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> Prev:
-        <div class="title-text">python定时开关机脚本</div>
-      </div>
-      
-      <!-- <div class="content">
-        python定时开关机脚本win10描述：每天早上8.00执行开机 ，15.32关机。
-1234567891011121
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://th.wallhaven.cc/small/we/we1q2r.jpg" class="lazyload placeholder" data-srcset="https://th.wallhaven.cc/small/we/we1q2r.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-b44931ea513e5f7b3b06f2703f79653c_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2023/03/07/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-nav-link">
+    <a href="/2023/03/07/%E5%AD%A6%E4%B9%A0/python%E5%AD%A6%E4%B9%A0/Day1/" class="post-nav-link">
       <div class="title">
         Next: <i class="fas fa-angle-right"></i>
-        <div class="title-text">面试题</div>
+        <div class="title-text">分支结构 . 循环结构</div>
       </div>
       <!-- <div class="content">
-        什么是死锁(deadlock)？
-死锁就是资源无法释放，两个线程都持有一个锁，且互相请求对方的锁，两个线程互相等待对方释
+        分支结构应用场景  在需要判断或选择的时候使用。
+if语句的使用   python中分支结构可以使用 if. elif 
       </div> -->
     </a>
   </div>
@@ -603,7 +573,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84"><span class="toc-text">分支结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">应用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if%E8%AF%AD%E5%8F%A5%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">if语句的使用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84"><span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="toc-text">应用场景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90%EF%BC%9A"><span class="toc-text">例子：</span></a></li></ol></li></ol></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python%E5%AE%9A%E6%97%B6%E5%BC%80%E5%85%B3%E6%9C%BA%E8%84%9A%E6%9C%ACwin10"><span class="toc-text">python定时开关机脚本win10</span></a></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
