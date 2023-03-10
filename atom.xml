@@ -6,7 +6,7 @@
   <link href="http://xhmblog.com/atom.xml" rel="self"/>
   
   <link href="http://xhmblog.com/"/>
-  <updated>2023-03-08T06:34:16.057Z</updated>
+  <updated>2023-03-09T08:16:01.773Z</updated>
   <id>http://xhmblog.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>字符串和常用的数据结构</title>
+    <link href="http://xhmblog.com/2023/03/09/%E5%AD%A6%E4%B9%A0/python%E5%AD%A6%E4%B9%A0/Day3/"/>
+    <id>http://xhmblog.com/2023/03/09/%E5%AD%A6%E4%B9%A0/python%E5%AD%A6%E4%B9%A0/Day3/</id>
+    <published>2023-03-08T16:00:00.000Z</published>
+    <updated>2023-03-09T08:16:01.773Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>python中，单个或多个字符用单引号或者双引号包围起来就表示字符串。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="string">&quot;你好&quot;</span></span><br><span class="line">s2 = <span class="string">&#x27;你好&#x27;</span></span><br><span class="line"><span class="comment"># 以三个双引号或单引号开头的字符串可以折行</span></span><br><span class="line">s3 = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">hello, </span></span><br><span class="line"><span class="string">world!</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span>(s1, s2, s3, end=<span class="string">&#x27;&#x27;</span>) <span class="comment">#你好 你好 </span></span><br><span class="line"><span class="comment">#hello,    </span></span><br><span class="line"><span class="comment">#world! </span></span><br></pre></td></tr></table></figure><p>字符串中使用 \  (反斜杠) 来表示转义 。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="string">&quot;hello,\n world&quot;</span> <span class="comment">#\n表示换行</span></span><br><span class="line">s2 = <span class="string">&quot;hello,world\t&quot;</span> <span class="comment">#\t表示制表符</span></span><br><span class="line">s3 = <span class="string">&quot;helloo,\\world&quot;</span> <span class="comment">#\\表示\</span></span><br><span class="line">s4 = <span class="string">r&quot;hello,\n world&quot;</span> <span class="comment">#字符串前面加r表示不换行</span></span><br><span class="line">s5 = <span class="string">&quot;hello&quot;</span> + <span class="string">&quot;world&quot;</span> <span class="comment"># + 字符串拼接</span></span><br><span class="line">s6 = <span class="string">&quot;hello,world&quot;</span> * <span class="number">5</span> <span class="comment"># * 重复字符串的内容次数</span></span><br><span class="line">s7 = (<span class="string">&#x27;he&#x27;</span> <span class="keyword">in</span> s5) <span class="comment">#in 判断s5 是否包含 &quot;he&quot;</span></span><br><span class="line">str1 = <span class="string">&quot;adf123456&quot;</span></span><br><span class="line"><span class="built_in">print</span>(str1[<span class="number">1</span>]) <span class="comment"># 取对应位置的字符 d </span></span><br><span class="line"><span class="built_in">print</span>(str1[<span class="number">0</span>:<span class="number">2</span>]) <span class="comment"># 取指定范围的字符 adf</span></span><br><span class="line"><span class="built_in">print</span>(str1[<span class="number">2</span>::<span class="number">2</span>]) <span class="comment"># 从2开始每隔2取一个字符 f246</span></span><br><span class="line"><span class="built_in">print</span>(str1[::<span class="number">2</span>]) <span class="comment">#从开头每隔2取一个字符 af246</span></span><br><span class="line"><span class="built_in">print</span>(str1[::-<span class="number">1</span>]) <span class="comment">#把字符串反转 654321fda</span></span><br><span class="line"><span class="built_in">print</span>(str1[-<span class="number">3</span>:-<span class="number">1</span>]) <span class="comment">#从字符串后面开始取值 取范围的 45</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;字符串&quot;&gt;&lt;a href=&quot;#字符串&quot; class=&quot;headerlink&quot; title=&quot;字符串&quot;&gt;&lt;/a&gt;字符串&lt;/h1&gt;&lt;p&gt;python中，单个或多个字符用单引号或者双引号包围起来就表示字符串。&lt;/p&gt;
+&lt;figure class=&quot;highlight p</summary>
+      
+    
+    
+    
+    <category term="python" scheme="http://xhmblog.com/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://xhmblog.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>python定时开关机脚本</title>
