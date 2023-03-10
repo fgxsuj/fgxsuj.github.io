@@ -65,6 +65,13 @@
 
   
   <url>
+    <loc>http://xhmblog.com/tags/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2023-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://xhmblog.com/tags/python-%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -73,13 +80,6 @@
   
   <url>
     <loc>http://xhmblog.com/tags/java/</loc>
-    <lastmod>2023-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://xhmblog.com/tags/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -95,6 +95,13 @@
 
   
   <url>
+    <loc>http://xhmblog.com/categories/java/</loc>
+    <lastmod>2023-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://xhmblog.com/categories/python-%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -103,13 +110,6 @@
   
   <url>
     <loc>http://xhmblog.com/categories/%E9%9D%A2%E8%AF%95/</loc>
-    <lastmod>2023-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://xhmblog.com/categories/java/</loc>
     <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

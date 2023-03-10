@@ -19,6 +19,21 @@
   <link href="/js/swiper/swiper@5.4.1.min.css" rel="stylesheet">
   
   
+    <script>
+        var themeModelId = '0 or 1 or 2 or 3 or 4 or 5 or 6';
+        if (themeModelId) {
+            localStorage.setItem('modelId', themeModelId);
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
+    <script>
+        var live2dOpen = eval('true') || false;
+        if (!live2dOpen) {
+            localStorage.setItem('waifu-display', 1609323474481);
+        }
+    </script>
+  
   
   
 <link rel="stylesheet" href="/css/animate.min.css">
@@ -1150,7 +1165,7 @@ if语句的使用   python中分支结构可以使用 if. elif . 和else 关键�
         function doSomething() {
           that.$notify({
             title: "成功",
-            content: "代码已复制，请遵守相关授权协议。",
+            content: "代码已复制",
             type: 'success'
           })
         }

@@ -5,11 +5,11 @@ http://xhmblog.com/2023/03/08/python%20%E8%84%9A%E6%9C%AC/python%E5%AE%9A%E6%97%
 http://xhmblog.com/2023/03/07/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98/
 http://xhmblog.com/2023/03/07/java/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/
 http://xhmblog.com/
+http://xhmblog.com/tags/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/
 http://xhmblog.com/tags/python-%E8%84%9A%E6%9C%AC/
 http://xhmblog.com/tags/java/
-http://xhmblog.com/tags/%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81/
 http://xhmblog.com/tags/python/
+http://xhmblog.com/categories/java/
 http://xhmblog.com/categories/python-%E8%84%9A%E6%9C%AC/
 http://xhmblog.com/categories/%E9%9D%A2%E8%AF%95/
-http://xhmblog.com/categories/java/
 http://xhmblog.com/categories/python/
